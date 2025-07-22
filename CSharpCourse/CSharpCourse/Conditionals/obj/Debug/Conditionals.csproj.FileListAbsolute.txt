@@ -1,0 +1,8 @@
+C:\Users\irem\source\repos\CSharpCourse\Conditionals\bin\Debug\Conditionals.exe.config
+C:\Users\irem\source\repos\CSharpCourse\Conditionals\bin\Debug\Conditionals.exe
+C:\Users\irem\source\repos\CSharpCourse\Conditionals\bin\Debug\Conditionals.pdb
+C:\Users\irem\source\repos\CSharpCourse\Conditionals\obj\Debug\Conditionals.csproj.AssemblyReference.cache
+C:\Users\irem\source\repos\CSharpCourse\Conditionals\obj\Debug\Conditionals.csproj.CoreCompileInputs.cache
+C:\Users\irem\source\repos\CSharpCourse\Conditionals\obj\Debug\Conditionals.exe
+C:\Users\irem\source\repos\CSharpCourse\Conditionals\obj\Debug\Conditionals.pdb
+C:\Users\irem\source\repos\CSharpCourse\Conditionals\obj\Debug\Conditionals.exe.config
