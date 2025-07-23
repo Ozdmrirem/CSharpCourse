@@ -5,3 +5,4 @@ C:\Users\irem\source\repos\CSharpCourse\Methods\obj\Debug\Methods.csproj.Assembl
 C:\Users\irem\source\repos\CSharpCourse\Methods\obj\Debug\Methods.csproj.CoreCompileInputs.cache
 C:\Users\irem\source\repos\CSharpCourse\Methods\obj\Debug\Methods.exe
 C:\Users\irem\source\repos\CSharpCourse\Methods\obj\Debug\Methods.pdb
+C:\Users\irem\source\repos\CSharpCourse\Methods\obj\Debug\Methods.exe.config
