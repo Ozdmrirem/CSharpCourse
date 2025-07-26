@@ -24,8 +24,13 @@ namespace Strings
             var result6 = sentence.IndexOf(" ");
             var result7 = sentence.LastIndexOf(" ");
             var result8 = sentence.Insert(0, "Hello, ");
-            var result9 = sentence.Substring(3);
-            Console.WriteLine(result9);
+            var result9 = sentence.Substring(3,4);
+            var result10 = sentence.ToLower(); // butun karakterleri kucuk harfe cevirir
+            var result11 = sentence.ToUpper(); // butun karakterleri buyuk harfe cevirir
+            var result12 = sentence.Replace(" ", "-"); // verilen kelimeyi degistirir
+            var result13 = sentence.Remove(2); // verilen karakterden sonrasını siler
+            var result14 = sentence.Remove(2, 5); // 3. karakterden baslayarak 4 karakter siler
+            Console.WriteLine(result14);
             Console.ReadLine();
         }
 
