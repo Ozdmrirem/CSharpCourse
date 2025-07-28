@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,10 +13,32 @@ namespace Interfaces
         {
             //InterfacesIntro();
 
-            IPerson person = new Customer();
+            //Demo();
+
+            ICustomerDal[] customerDals = new ICustomerDal[3] 
+            { 
+                new SqlServerCustomerDal(),
+                new OracleCustomerDal(),
+                new MySqlCustomerDal()
+            };
+
+            foreach (var customerDal in customerDals)
+            {
+                customerDal.Add();
+            }
+
+
 
             Console.ReadLine();
+
         }
+
+            private static void Demo()
+            {
+                CustomerManager customerManager = new CustomerManager();
+                customerManager.Add(new SqlServerCustomerDal());
+            }
+        
 
         private static void InterfacesIntro()
         {
@@ -36,6 +59,7 @@ namespace Interfaces
                 Departmant = "Computer Sciences"
             };
 
+
             manager.Add(customer);
             manager.Add(student);
         }
@@ -54,6 +78,7 @@ namespace Interfaces
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
         public string Address { get; set; }
     }
 
@@ -62,16 +87,16 @@ namespace Interfaces
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
         public string Departmant { get; set; }
     }
 
-
-        class PersonManager
+    class PersonManager 
+    {
+        public void Add(IPerson person)
         {
-            public void Add(IPerson person)
-            {
-                Console.WriteLine(person.FirstName);
-            }
-
+            Console.WriteLine(person.FirstName);
         }
     }
+}
+
