@@ -10,6 +10,28 @@ namespace InterfacesDemo
     {
         static void Main(string[] args)
         {
+            IWorker[] workers = new IWorker[3]
+            {
+                new Manager(),
+                new Worker(),
+                new Robot()
+            };
+
+            foreach (var worker in workers)
+            {
+                worker.Work();
+            }
+
+            IEat[] eats = new IEat[2]
+            {
+                new Manager(),
+                new Worker()
+            };
+
+            foreach (var eat in eats)
+            {
+                eat.Eat();
+            }
         }
     }
 
@@ -26,7 +48,7 @@ namespace InterfacesDemo
     {
         void GetSalary();
     }
-    class Manager : IWorker
+    class Manager : IWorker, IEat, ISalary
     {
         public void Eat()
         {
@@ -44,16 +66,18 @@ namespace InterfacesDemo
         }
     }
 
-    class Worker : IWorker
+    class Worker : IWorker, IEat, ISalary
     {
         public void Eat()
         {
             throw new NotImplementedException();
         }
+
         public void GetSalary()
         {
             throw new NotImplementedException();
         }
+
         public void Work()
         {
             throw new NotImplementedException();
@@ -62,16 +86,6 @@ namespace InterfacesDemo
 
     class Robot : IWorker
     {
-        public void Eat()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void GetSalary()
-        {
-            throw new NotImplementedException();
-        }
-
         public void Work()
         {
             throw new NotImplementedException();
