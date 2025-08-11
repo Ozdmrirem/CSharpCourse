@@ -16,6 +16,8 @@ namespace Collections
             cities.Add("Ankara");
             cities.Add("İstanbul");
 
+            //Console.WriteLine(cities.Contains("Adana"));
+
             foreach (var city in cities)
             {
                 Console.WriteLine(city);
@@ -31,7 +33,7 @@ namespace Collections
                 new Customer { Id = 2, FirstName = "Derin" }
             };
 
-            var count = customers.Count;
+            
             var customer2 = new Customer
             {
                 Id = 3,FirstName = "Salih"
@@ -44,13 +46,17 @@ namespace Collections
                 new Customer { Id = 5, FirstName = "Ayşe" }
             });
 
-            customers.Clear();
+            Console.WriteLine(customers.Contains(customer2));
+
+            //customers.Clear();
 
             foreach (var customer in customers)
             {
                 Console.WriteLine(customer.FirstName);
             }
 
+            var count = customers.Count;
+            Console.WriteLine("Count: {0} " , count);
             Console.ReadLine();
         }
 
