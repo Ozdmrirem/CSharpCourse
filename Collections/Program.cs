@@ -12,6 +12,28 @@ namespace Collections
         static void Main(string[] args)
         {
             //ArrayList();
+            //List();
+            Dictionary<string,string> dictionary = new Dictionary<string, string>();
+            dictionary.Add("book","kitap");
+            dictionary.Add("table","tablo");
+            dictionary.Add("computer","bilgisayar");
+
+            //Console.WriteLine(dictionary["table"]);
+            //Console.WriteLine(dictionary["glass"]);
+
+            foreach (var item in dictionary)
+            {
+                Console.WriteLine(item.Value);
+            }
+
+            Console.WriteLine(dictionary.ContainsKey("book"));
+            Console.WriteLine(dictionary.ContainsKey("glass"));
+
+            Console.ReadLine();
+        }
+
+        private static void List()
+        {
             List<string> cities = new List<string>();
             cities.Add("Ankara");
             cities.Add("İstanbul");
@@ -33,10 +55,11 @@ namespace Collections
                 new Customer { Id = 2, FirstName = "Derin" }
             };
 
-            
+
             var customer2 = new Customer
             {
-                Id = 3,FirstName = "Salih"
+                Id = 3,
+                FirstName = "Salih"
             };
 
             customers.Add(customer2);
@@ -50,14 +73,26 @@ namespace Collections
 
             //customers.Clear();
 
+            var index = customers.IndexOf(customer2);
+            Console.WriteLine("Index : {0}", index);
+
+            customers.Add(customer2);
+            var index2 = customers.LastIndexOf(customer2);
+            Console.WriteLine("Last Index : {0}", index2);
+
+            customers.Insert(0, customer2);
+
+            customers.Remove(customer2);
+            //customers.RemoveAll(c=>c.FirstName=="Salih");
+
+
             foreach (var customer in customers)
             {
                 Console.WriteLine(customer.FirstName);
             }
 
             var count = customers.Count;
-            Console.WriteLine("Count: {0} " , count);
-            Console.ReadLine();
+            Console.WriteLine("Count: {0} ", count);
         }
 
         private static void ArrayList()
