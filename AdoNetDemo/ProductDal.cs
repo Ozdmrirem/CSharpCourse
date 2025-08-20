@@ -27,13 +27,17 @@ namespace AdoNetDemo
 
             while (reader.Read())
             {
-
+                Product product = new Product
+                {
+                    Id = reader["Id"]
+                }
             }
 
             reader.Close();
             connection.Close();
             return dataTable;
         }
+
 
         public DataTable GetAll2()
         {
