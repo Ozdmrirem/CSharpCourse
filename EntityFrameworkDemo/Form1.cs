@@ -79,7 +79,11 @@ namespace EntityFrameworkDemo
         private void tbxSearch_TextChanged(object sender, EventArgs e)
         {
             SearchProducts(tbxSearch.Text);
+        }
 
+        private void tbxGetById_Click(object sender, EventArgs e)
+        {
+            _productDal.GetById(1);
         }
     }
 }

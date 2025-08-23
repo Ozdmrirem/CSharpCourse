@@ -48,6 +48,7 @@
             this.dgwProducts = new System.Windows.Forms.DataGridView();
             this.tbxSearch = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
+            this.tbxGetById = new System.Windows.Forms.Button();
             this.gbxUpdate.SuspendLayout();
             this.gbxAdd.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProducts)).BeginInit();
@@ -55,7 +56,7 @@
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(30, 24);
+            this.btnRemove.Location = new System.Drawing.Point(30, 22);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(194, 23);
             this.btnRemove.TabIndex = 13;
@@ -243,11 +244,22 @@
             this.lblSearch.TabIndex = 15;
             this.lblSearch.Text = "Search";
             // 
+            // tbxGetById
+            // 
+            this.tbxGetById.Location = new System.Drawing.Point(241, 22);
+            this.tbxGetById.Name = "tbxGetById";
+            this.tbxGetById.Size = new System.Drawing.Size(194, 23);
+            this.tbxGetById.TabIndex = 16;
+            this.tbxGetById.Text = "Get By Id";
+            this.tbxGetById.UseVisualStyleBackColor = true;
+            this.tbxGetById.Click += new System.EventHandler(this.tbxGetById_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(986, 546);
+            this.Controls.Add(this.tbxGetById);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.btnRemove);
@@ -289,6 +301,7 @@
         private System.Windows.Forms.DataGridView dgwProducts;
         private System.Windows.Forms.TextBox tbxSearch;
         private System.Windows.Forms.Label lblSearch;
+        private System.Windows.Forms.Button tbxGetById;
     }
 }
 
