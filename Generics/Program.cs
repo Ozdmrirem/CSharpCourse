@@ -33,7 +33,7 @@ namespace Generics
             return new List<T>(items);
         }
     }
-    class Product
+    class Product:IEntity
     {
         
     }
@@ -42,7 +42,7 @@ namespace Generics
     {
        
     }
-    class Customer
+    class Customer:IEntity
     {
         public string FirstName { get; set; }
     }
