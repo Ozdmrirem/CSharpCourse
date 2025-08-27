@@ -5,6 +5,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Attributes
 {   
     class Program
@@ -14,6 +15,7 @@ namespace Attributes
             Customer customer = new Customer{Id=1,LastName = "Demiroğ", Age= 32 };
             CustomerDal customerDal = new CustomerDal();
             customerDal.Add(customer);
+            
             Console.ReadLine();
         }
     }
@@ -32,10 +34,32 @@ namespace Attributes
 
     class CustomerDal
     {
+        [Obsolete("Don't use Add, instead use AddNew Method")]
         public void Add(Customer customer)
         {
             Console.WriteLine("{0},{1},{2},{3} Added!",
-                customer.Id,customer.FirstName,customer.LastName,customer.Age);
+                customer.Id, customer.FirstName, customer.LastName, customer.Age);
+        }
+        public void AddNew(Customer customer)
+        {
+            Console.WriteLine("{0},{1},{2},{3} Added!",
+                customer.Id, customer.FirstName, customer.LastName, customer.Age);
         }
     }
+
+    class RequiredPropertyAttribute : Attribute
+    {
+
+    }
+
+    class ToTableAttribute : Attribute
+    {
+        private string _tableName;
+        public ToTableAttribute(string tableName)
+        {
+            _tableName = tableName;
+        }
+    }
+
+
 }
