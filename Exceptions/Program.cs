@@ -13,6 +13,46 @@ namespace Exceptions
         {
             //ExceptionIntro();
 
+            //TryCatch();
+
+            //Method
+
+            //ActionDemo();
+
+            Func<int,int,int> add = Topla;
+
+            Console.WriteLine(add(3,5));
+
+            Func<int> getRandomNumber = delegate ()
+            {
+                Random random = new Random();
+                return new Random().Next(1, 100);
+            };
+
+            Func<int> getRandomNumber2 = () => new Random().Next(1, 100);
+
+            Console.WriteLine(getRandomNumber());
+
+            //Console.WriteLine(Topla(2,3));
+
+            Console.ReadLine();
+        }
+
+        static int Topla(int x, int y)
+        {
+            return x + y;
+        }
+
+        private static void ActionDemo()
+        {
+            HandleException(() =>
+            {
+                Find();
+            });
+        }
+
+        private static void TryCatch()
+        {
             try
             {
                 Find();
@@ -25,14 +65,6 @@ namespace Exceptions
             {
              
             }
-
-            //Method
-            HandleException(() =>
-            {
-                Find();
-            });
-
-            Console.ReadLine();
         }
 
         private static void HandleException(Action action)
