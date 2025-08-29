@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.ExceptionServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace Exceptions
@@ -20,7 +21,7 @@ namespace Exceptions
             //ActionDemo();
 
             Func<int,int,int> add = Topla;
-
+             
             Console.WriteLine(add(3,5));
 
             Func<int> getRandomNumber = delegate ()
@@ -29,9 +30,13 @@ namespace Exceptions
                 return new Random().Next(1, 100);
             };
 
+            
+
             Func<int> getRandomNumber2 = () => new Random().Next(1, 100);
 
             Console.WriteLine(getRandomNumber());
+            Thread.Sleep(1000);
+            Console.WriteLine(getRandomNumber2());
 
             //Console.WriteLine(Topla(2,3));
 
